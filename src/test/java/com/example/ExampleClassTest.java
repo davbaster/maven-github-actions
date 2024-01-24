@@ -11,3 +11,4 @@ public class ExampleClassTest {
         assertEquals(5, example.add(2, 3));
     }
 }
+
