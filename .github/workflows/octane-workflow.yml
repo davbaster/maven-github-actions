@@ -18,6 +18,7 @@ jobs:
           octaneWorkspace: 1002
           octaneClientId: ${{secrets.ALM_OCTANE_CLIENT_ID}}
           octaneClientSecret: ${{secrets.ALM_OCTANE_CLIENT_SECRET}}
+          #token is generated and managed by github
           githubToken: ${{secrets.GITHUB_TOKEN}}
           serverBaseUrl: https://github.com/davbaster/maven-github-actions
           # Pattern for identifying JUnit style report files for test result injection in ALM Octane
