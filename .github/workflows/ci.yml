@@ -19,13 +19,14 @@ jobs:
           java-version: 1.8
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn -B package --file pom.xml
 
-      - name: Generate JUnit Report
-        run: mvn surefire-report:report
+      - name: Run Tests and Generate JUnit Report
+        run: mvn test
 
-      - name: Upload JUnit Report
+      - name: Upload JUnit Test Results
         uses: actions/upload-artifact@v2
+        if: always()
         with:
           name: junit-reports
           path: target/surefire-reports/*.xml

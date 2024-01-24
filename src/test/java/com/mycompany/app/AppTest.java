@@ -1,11 +1,13 @@
 package com.mycompany.app;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(plugin="com.hpe.alm.octane.OctaneGherkinFormatter:gherkin-results/ManualRunnerTest_OctaneGherkinResults.xml",
-    features="src/test/resources/feature/manualRunner/")
-public class AppTest {
+public class ExampleClassTest {
+
+    @Test
+    public void testAdd() {
+        ExampleClass example = new ExampleClass();
+        assertEquals(5, example.add(2, 3));
+    }
 }
