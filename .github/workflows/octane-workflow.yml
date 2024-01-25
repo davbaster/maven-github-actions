@@ -1,8 +1,12 @@
 name: OctaneIntegration
+# Events the integration should be triggered on
 on:
+  pull_request:
+    types: [opened, edited, closed, reopened]
   workflow_run:
+    # List of workflows to integrate with ALM Octane
     workflows: [Java CI]
-    types: [completed]
+    types: [requested, completed]
 jobs:
   octane_integration_job:
     # List of runner tags
