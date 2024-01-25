@@ -5,6 +5,7 @@ on:
     types: [opened, edited, closed, reopened]
   workflow_run:
     # List of workflows to integrate with ALM Octane
+    #[Java CI] = ci.yml
     workflows: [Java CI]
     types: [requested, completed]
 jobs:
