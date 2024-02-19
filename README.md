@@ -16,3 +16,4 @@ the "Deliver" stage of your Pipeline.
 
 Some modifications has been done to the Jenkinsfile to adjust it to our demo environment....
 commit to fix defect 44005
+updated readme for testing
